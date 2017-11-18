@@ -15,7 +15,8 @@ node {
    sh "${mvnHome}/bin/mvn -Dmaven.test.failure.ignore clean package"
    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 
-    echo "My branch is: ${BRANCH_NAME}"
+    // echo "My branch is: ${BRANCH_NAME}" // --> Error
+    echo "My branch is: ${env.BRANCH_NAME}"
     echo "scm.branches[0].name : ${scm.branches[0].name}"
 
 }
