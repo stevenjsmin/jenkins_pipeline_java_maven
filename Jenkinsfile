@@ -17,6 +17,6 @@ node {
 
     // echo "My branch is: ${BRANCH_NAME}" // --> Error
     echo "My branch is: ${env.BRANCH_NAME}"
-    echo "scm.branches[0].name : ${scm.branches[0].name}"
+    //echo "scm.branches[0].name : ${scm.branches[0].name}" // --> Scripts not permitted
 
 }
