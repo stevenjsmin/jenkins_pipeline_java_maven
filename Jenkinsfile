@@ -16,11 +16,11 @@ node {
    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 
     // echo "My branch is: ${BRANCH_NAME}" // --> Error
-    echo "My branch is 1: ${env.BRANCH_NAME}"
+    //echo "My branch is 1: ${env.BRANCH_NAME}"
     // echo "My branch is 1: ${env.GIT_BRANCH}"
     //echo "My branch is 1: ${GIT_BRANCH}"
-    def git_branch = env.BRANCH_NAME[0]
-    echo "My branch is 2: ${it_branch}"
+    //def git_branch = env.BRANCH_NAME[0]
+    //echo "My branch is 2: ${it_branch}"
     //echo "scm.branches[0].name : ${scm.branches[0].name}" // --> Scripts not permitted
 
 }
